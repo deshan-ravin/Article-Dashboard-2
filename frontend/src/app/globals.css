@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --foreground-rgb: 179, 179, 179; /* Updated color */
+    --background-start-rgb: 200, 200, 200; /* Light Gray */
+    --background-end-rgb: 200, 200, 200; /* Light Gray */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 179, 179, 179; /* Updated color */
+    --background-start-rgb: 200, 200, 200; /* Light Gray */
+    --background-end-rgb: 200, 200, 200; /* Light Gray */
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background-color: rgb(var(--background-start-rgb)); /* French Silver background */
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

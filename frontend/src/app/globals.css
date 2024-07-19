@@ -3,22 +3,22 @@
 @tailwind utilities;
 
 :root {
-    --foreground-rgb: 179, 179, 179; /* Updated color */
-    --background-start-rgb: 200, 200, 200; /* Light Gray */
-    --background-end-rgb: 200, 200, 200; /* Light Gray */
+  --foreground-rgb: 179, 179, 179; /* Updated color */
+  --background-start-rgb: 192, 192, 192; /* Bright Silver */
+  --background-end-rgb: 192, 192, 192; /* Bright Silver */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 179, 179, 179; /* Updated color */
-    --background-start-rgb: 200, 200, 200; /* Light Gray */
-    --background-end-rgb: 200, 200, 200; /* Light Gray */
+    --background-start-rgb: 192, 192, 192; /* Bright Silver */
+    --background-end-rgb: 192, 192, 192; /* Bright Silver */
   }
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background-color: rgb(var(--background-start-rgb)); /* French Silver background */
+  background-color: rgb(var(--background-start-rgb)); /* Bright Silver background */
 }
 
 @layer utilities {

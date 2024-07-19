@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -13,12 +14,8 @@ export default function Home() {
 
       {/* Button Section */}
       <div className="flex space-x-4 mt-8">
-        <a
-          href="/pages"
-          className="inline-block px-6 py-3 text-lg font-medium text-red-600 bg-white rounded-md hover:bg-red-100 hover:text-red-700 transition duration-300"
-        >
-          Login
-        </a>
+        
+          <Link className="inline-block px-6 py-3 text-lg font-medium text-red-600 bg-white rounded-md hover:bg-red-100 hover:text-red-700 transition duration-300" href="/test">View Articles</Link>
         <a
           href="/signup"
           className="inline-block px-6 py-3 text-lg font-medium text-white bg-red-600 rounded-md hover:bg-red-700 hover:text-white transition duration-300"

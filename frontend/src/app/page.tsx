@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-
+import { Footer } from "@/components/footer";
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-zinc-300">
       <div className="flex flex-wrap items-center justify-between w-full max-w-4xl gap-5 mx-auto text-white bg-red-600 px-7 py-7 lg:px-12 lg:py-12 lg:flex-nowrap rounded-xl">
         <div className="flex-grow text-center">
           <h2 className="text-4xl font-bold lg:text-5xl">
@@ -15,13 +15,17 @@ export default function Home() {
       {/* Button Section */}
       <div className="flex space-x-4 mt-8">
         
-          <Link className="inline-block px-6 py-3 text-lg font-medium text-red-600 bg-white rounded-md hover:bg-red-100 hover:text-red-700 transition duration-300" href="/test">View Articles</Link>
-        <a
-          href="/signup"
-          className="inline-block px-6 py-3 text-lg font-medium text-white bg-red-600 rounded-md hover:bg-red-700 hover:text-white transition duration-300"
-        >
-          Sign Up
-        </a>
+          <Link className="inline-block px-8 py-3 text-lg font-medium text-red-600 bg-white rounded-md hover:bg-red-100 hover:text-red-700 transition duration-300" href="/login">
+            Login
+          </Link>
+
+          <Link className="inline-block px-6 py-3 text-lg font-medium text-white bg-red-600 rounded-md hover:bg-red-700 hover:text-white transition duration-300" href="/signup">
+            Sign Up
+          </Link>
+      </div>
+
+      <div>
+        <Footer/>
       </div>
     </main>
   );

@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 const Navbar = () => {
   return (
   
-    <div className="fixed top-2 w-[calc(100%-2rem)] max-w-4xl left-1/2 transform -translate-x-1/2 flex items-center justify-between gap-5 bg-zinc-500 px-7 rounded-xl z-50" style={{ padding: '0.5rem 0' }}>
+    <div className="w-[calc(100%-2rem)] max-w-4xl mx-auto mt-4 flex items-center justify-between gap-5 bg-zinc-500 px-7 rounded-xl" style={{ padding: '0.5rem 0' }}>
     <div className="container mx-auto h-full">
       <div className="flex justify-between items-center h-full">
         <ul className="flex w-full justify-evenly text-white">

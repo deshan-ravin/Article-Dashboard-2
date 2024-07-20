@@ -13,7 +13,7 @@ import { Label } from "@/components/ui/label"
 
 export function LoginForm() {
   return (
-    <Card className="mx-auto max-w-sm">
+    <Card className="w-[450px]">
       <CardHeader>
         <CardTitle className="text-2xl">Login</CardTitle>
         <CardDescription>
@@ -44,13 +44,13 @@ export function LoginForm() {
             Login
           </Button>
 
-          <Button variant="outline" className="w-full  hover:bg-zinc-500">
+          <Button variant="outline" className="w-full  text-red-600 bg-white rounded-md hover:bg-zinc-400 hover:text-red-700 transition duration-300">
             Login with Google
           </Button>
         </div>
         <div className="mt-4 text-center text-sm">
           Don&apos;t have an account?{" "}
-          <Link href="#" className="underline">
+          <Link  className="text-blue-500 hover:text-red-500 underline" href="/signup">
             Sign up
           </Link>
         </div>

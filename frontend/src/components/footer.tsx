@@ -13,9 +13,9 @@ export function Footer() {
           <div className="text-lg font-semibold">Follow us</div>
         </div>
         <div className="flex justify-end w-full lg:w-auto space-x-2 text-black dark:text-black">
-          <a href="https://twitter.com/" target="_blank" rel="noopener">
-            <span className="sr-only">Twitter</span>
-            <Twitter />
+          <a href="https://x.com" target="_blank" rel="noopener">
+            <span className="sr-only">X</span>
+            < X/>
           </a>
           <a href="https://facebook.com/" target="_blank" rel="noopener">
             <span className="sr-only">Facebook</span>
@@ -42,7 +42,7 @@ export function Footer() {
     );
   }
   
-  const Twitter = ({ size = 24 }) => (
+  const X = ({ size = 24 }) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width={size}
@@ -50,9 +50,10 @@ export function Footer() {
       viewBox="0 0 24 24"
       fill="currentColor"
     >
-      <path d="M24 4.37a9.6 9.6 0 0 1-2.83.8 5.04 5.04 0 0 0 2.17-2.8c-.95.58-2 1-3.13 1.22A4.86 4.86 0 0 0 16.61 2a4.99 4.99 0 0 0-4.79 6.2A13.87 13.87 0 0 1 1.67 2.92 5.12 5.12 0 0 0 3.2 9.67a4.82 4.82 0 0 1-2.23-.64v.07c0 2.44 1.7 4.48 3.95 4.95a4.84 4.84 0 0 1-2.22.08c.63 2.01 2.45 3.47 4.6 3.51A9.72 9.72 0 0 1 0 19.74 13.68 13.68 0 0 0 7.55 22c9.06 0 14-7.7 14-14.37v-.65c.96-.71 1.79-1.6 2.45-2.61z" />
+      <path d="M14.095479,10.316482L22.286354,1h-1.940718l-7.115352,8.087682L7.551414,1H1l8.589488,12.231093L1,23h1.940717  l7.509372-8.542861L16.448587,23H23L14.095479,10.316482z M11.436522,13.338465l-0.871624-1.218704l-6.924311-9.68815h2.981339  l5.58978,7.82155l0.867949,1.218704l7.26506,10.166271h-2.981339L11.436522,13.338465z" />
     </svg>
-  );
+);
+
   
   const Facebook = ({ size = 24 }) => (
     <svg

@@ -12,7 +12,7 @@ export default function CreatArticle() {
 
       <Card className="w-full max-w-3xl p-4 mt-8"> 
         <CardHeader>
-          <CardTitle>Create Your New Article</CardTitle>
+          <CardTitle>Create Your New Article ✍️</CardTitle>
           <CardDescription className="text-red-500">
                 ARTICLE DASHBOARD
           </CardDescription>
@@ -39,9 +39,12 @@ export default function CreatArticle() {
         </CardContent>
 
        <div className="p-4 flex justify-between">
-            <button className="px-6 py-3 text-lg font-medium text-red-600 bg-white rounded-md hover:bg-zinc-400 hover:text-red-700 transition duration-300">
-                Cancel
-            </button>
+       <a href="/user">
+        <button className="px-6 py-3 text-lg font-medium text-red-600 bg-white rounded-md hover:bg-zinc-400 hover:text-red-700 transition duration-300">
+                  Cancel
+        </button>
+       </a>
+            
             <button className="px-6 py-3 text-lg font-medium text-white bg-red-600 rounded-md hover:bg-zinc-400 hover:text-white transition duration-300">
                 Create
         </button>

@@ -76,9 +76,12 @@ export default function UpdateArticle() {
         </CardContent>
 
         <div className="p-4 flex justify-between">
+        <a href="/article">
           <button className="px-6 py-3 text-lg font-medium text-red-600 bg-white rounded-md hover:bg-zinc-400 hover:text-red-700 transition duration-300">
             Cancel
           </button>
+        </a>
+
           <button className="px-6 py-3 text-lg font-medium text-white bg-red-600 rounded-md hover:bg-zinc-400 hover:text-white transition duration-300">
             Update
           </button>

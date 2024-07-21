@@ -4,18 +4,38 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Footer } from "@/components/footer";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 
-export default function CreatArticle() {
+export default function UpdateArticle() {
+  const router = useRouter();
+  const { author, date, title, content } = router.query;
+
+  // States to hold form data
+  const [authorName, setAuthorName] = useState("");
+  const [dateCreated, setDateCreated] = useState("");
+  const [articleTitle, setArticleTitle] = useState("");
+  const [articleContent, setArticleContent] = useState("");
+
+  useEffect(() => {
+    if (router.isReady) {
+      setAuthorName(author || "");
+      setDateCreated(date || "");
+      setArticleTitle(title || "");
+      setArticleContent(content || "");
+    }
+  }, [router.isReady, author, date, title, content]);
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-center pt-25 pb-24 pl-24 pr-24 bg-zinc-300">
       <Navbar />
 
       <Card className="w-full max-w-3xl p-4 mt-8"> 
         <CardHeader>
-          <CardTitle>Update Your Article</CardTitle>
-          <CardDescription className="text-red-500">
-                ARTICLE DASHBOARD 
-          </CardDescription>
+          <div className="flex justify-between items-center">
+            <CardTitle className="text-2xl font-bold">{authorName}</CardTitle>
+            <CardDescription className="text-gray-500">{dateCreated}</CardDescription>
+          </div>
         </CardHeader>
         <CardContent>
           <div className="grid gap-6">
@@ -28,6 +48,8 @@ export default function CreatArticle() {
               <Input
                 id="title"
                 type="text"
+                value={articleTitle}
+                onChange={(e) => setArticleTitle(e.target.value)}
                 className="w-full"
               />
             </div>
@@ -39,22 +61,22 @@ export default function CreatArticle() {
               </Label>
               <Textarea
                 id="content"
+                value={articleContent}
+                onChange={(e) => setArticleContent(e.target.value)}
                 className="h-60 w-full"
               />
             </div>
           </div>
         </CardContent>
 
-       <div className="p-4 flex justify-between">
-            <button className="px-6 py-3 text-lg font-medium text-red-600 bg-white rounded-md hover:bg-zinc-400 hover:text-red-700 transition duration-300">
-                Cancel
-            </button>
-            <button className="px-6 py-3 text-lg font-medium text-white bg-red-600 rounded-md hover:bg-zinc-400 hover:text-white transition duration-300">
-                Update
-        </button>
-</div>
-
-
+        <div className="p-4 flex justify-between">
+          <button className="px-6 py-3 text-lg font-medium text-red-600 bg-white rounded-md hover:bg-zinc-400 hover:text-red-700 transition duration-300">
+            Cancel
+          </button>
+          <button className="px-6 py-3 text-lg font-medium text-white bg-red-600 rounded-md hover:bg-zinc-400 hover:text-white transition duration-300">
+            Update
+          </button>
+        </div>
       </Card>
 
       <Footer/>

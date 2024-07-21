@@ -10,23 +10,23 @@ const Navbar = () => {
       <div className="flex justify-between items-center h-full">
         <ul className="flex w-full justify-evenly text-white">
           <li>
-            <Link href="" className=" hover:text-red-500">
+            <Link href="/" className=" hover:text-red-500">
               <p>Home</p>
             </Link>
           </li>
           <li>
-            <Link href="/aboutus" className=" hover:text-red-500">
-              <p>About Us</p>
+            <Link href="/create" className=" hover:text-red-500">
+              <p>create</p>
             </Link>
           </li>
           <li>
-            <Link href="/articles" className=" hover:text-red-500">
+            <Link href="/article" className=" hover:text-red-500">
               <p>Articles</p>
             </Link>
           </li>
           <li>
-            <Link href="" className=" hover:text-red-500">
-              <p>Logout</p>
+            <Link href="/update" className=" hover:text-red-500">
+              <p>update</p>
             </Link>
           </li>
         </ul>

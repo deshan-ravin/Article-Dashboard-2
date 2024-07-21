@@ -12,25 +12,25 @@ export default function Home() {
       authorName: "John Doe",
       dateCreated: "2024-07-20",
       articleTitle: "Understanding TypeScript",
-      articleContent: "This article explains the basics of TypeScript, a typed superset of JavaScript."
+      articleContent: "This article delves deeply into the world of artificial intelligence, examining the history, key concepts, and ethical considerations surrounding AI development. It explores various branches of AI, including machine learning, natural language processing, and computer vision, and discusses the potential impacts of AI on different industries. The article also addresses the challenges and future prospects of integrating AI technologies into everyday applications and the workforce."
     },
     {
       authorName: "Jane Smith",
       dateCreated: "2024-07-19",
       articleTitle: "Getting Started with Next.js",
-      articleContent: "Learn how to build a simple application using the Next.js framework."
+      articleContent: "This article provides a detailed overview of the principles and practices of DevOps, emphasizing the importance of collaboration between development and operations teams. It outlines the key benefits of adopting a DevOps culture, such as increased deployment frequency, faster time to market, and improved recovery times. The article also explores various tools and methodologies used in DevOps, including continuous integration, continuous delivery, and infrastructure as code."
     },
     {
       authorName: "Alice Johnson",
       dateCreated: "2024-07-18",
       articleTitle: "Spring Boot for Beginners",
-      articleContent: "An introduction to Spring Boot and its core features."
+      articleContent: "This article explores the complexities of blockchain technology, explaining its foundational concepts and the mechanics behind distributed ledgers. It discusses the significance of blockchain in enabling secure, transparent transactions without intermediaries, and its potential applications across various sectors, such as finance, supply chain, and healthcare. The article also examines the challenges facing blockchain adoption, including scalability issues, regulatory concerns, and the need for standardization."
     },
     {
       authorName: "Bob Brown",
       dateCreated: "2024-07-17",
       articleTitle: "Advanced AWS Techniques",
-      articleContent: "This article covers advanced techniques and best practices for using AWS services."
+      articleContent: "This article investigates the development and impact of progressive web apps (PWAs), highlighting their advantages over traditional web and mobile applications. It explains how PWAs leverage modern web capabilities to deliver app-like experiences, including offline functionality, push notifications, and improved performance. The article also provides practical guidance on building PWAs, covering key technologies such as service workers, web app manifests, and responsive design principles to ensure cross-platform compatibility and user engagement."
     }
   ];
 
@@ -66,7 +66,9 @@ export default function Home() {
         <div className="flex flex-wrap items-center justify-center w-full max-w-1xl gap-5 mt-10 mx-auto">
             {
               articles.map((article, index) => (
-                <ArticleCard key={index} articleTitle={article.articleTitle}/>
+                <ArticleCard key={index} 
+                articleTitle={article.articleTitle}
+                articleContent={article.articleContent} />
               ))
             }
         </div>

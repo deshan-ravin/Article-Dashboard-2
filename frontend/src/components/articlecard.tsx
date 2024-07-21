@@ -22,23 +22,29 @@ import Article from "@/lib/types"
 import Link from "next/link";
 
 interface ArticleProps {
+  articleContent: string;
   articleTitle: string;
 }
 
 export function ArticleCard(props: ArticleProps) {
   return (
     
-            <Card className="w-[350px] h-[400px] overflow-auto bg-white shadow-lg rounded-lg p-4">
-      <h1> { props.articleTitle} </h1>
-      <Link
+
+    <Link
             href={{
               pathname: "/article",
               query: {
-                title: props.articleTitle,
+                title: "props.articleTitle",
+                content: "props.articleContent"
               }
-            }}
-          > <p>Read more....</p>          </Link>
+                  }} > 
+            <Card className="w-[350px] h-[400px] overflow-auto bg-white shadow-lg rounded-lg p-4">
+      <h1 className="text-2xl font-bold font-sans w-full mt-2">
+         { props.articleTitle} </h1>
+          <p className="mt-5">{props.articleContent}</p>
+                
     </Card>
+    </Link>
 
   )
 }

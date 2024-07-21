@@ -17,9 +17,15 @@ export default function ArticlePage() {
   useEffect(() => {
     const url = new URL(window.location.href);
     const title = url.searchParams.get('title');
+    const author = url.searchParams.get('author');
+    const date = url.searchParams.get('date');
+    const content = url.searchParams.get('content');
     
-    if (title) {
+    if (title && author && date && content) {
       setArticleTitle(title);
+      setAuthorName(author);
+      setDateCreated(date);
+      setArticleContent(content);
     }
   }, []);
   return (

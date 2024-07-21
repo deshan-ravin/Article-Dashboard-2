@@ -1,30 +1,36 @@
+"use client";
+
 import Navbar from "@/components/nav";
 import { Card, CardHeader, CardContent, CardDescription, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Footer } from "@/components/footer";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function UpdateArticle() {
   const router = useRouter();
-  const { author, date, title, content } = router.query;
-
-  // States to hold form data
   const [authorName, setAuthorName] = useState("");
   const [dateCreated, setDateCreated] = useState("");
   const [articleTitle, setArticleTitle] = useState("");
   const [articleContent, setArticleContent] = useState("");
 
   useEffect(() => {
-    if (router.isReady) {
-      setAuthorName(author || "");
-      setDateCreated(date || "");
-      setArticleTitle(title || "");
-      setArticleContent(content || "");
+    // Example of query params extraction (replace with your actual logic)
+    const url = new URL(window.location.href);
+    const author = url.searchParams.get('author');
+    const date = url.searchParams.get('date');
+    const title = url.searchParams.get('title');
+    const content = url.searchParams.get('content');
+    
+    if (author && date && title && content) {
+      setAuthorName(author);
+      setDateCreated(date);
+      setArticleTitle(title);
+      setArticleContent(content);
     }
-  }, [router.isReady, author, date, title, content]);
+  }, []);
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center pt-25 pb-24 pl-24 pr-24 bg-zinc-300">

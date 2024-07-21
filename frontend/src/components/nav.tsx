@@ -25,8 +25,8 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link href="/update" className=" hover:text-red-500">
-              <p>update</p>
+            <Link href="/" className=" hover:text-red-500">
+              <p>All Articles</p>
             </Link>
           </li>
         </ul>

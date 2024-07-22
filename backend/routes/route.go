@@ -14,12 +14,11 @@ func InitRoute(router *gin.Engine) {
 	router.GET("/health", handlers.HealthCheck)
 	router.POST("/api/login", handlers.Login)
 	router.POST("/api/signup", handlers.Signup)
-}
 
-
-func InitArticleRoute(router *gin.Engine) {
 	router.POST("/api/articles", handlers.CreateArticle)
 	router.PUT("/api/articles/:no", handlers.UpdateArticle)
 	router.DELETE("/api/articles/:no", handlers.DeleteArticle)
 	router.GET("/api/articles/:no", handlers.GetArticles)
 }
+
+

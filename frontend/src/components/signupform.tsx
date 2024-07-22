@@ -25,10 +25,10 @@ export function SignUpForm() {
     event.preventDefault();
     try {
       const response = await axios.post("/api/signup", { email, password, name });
-      // Handle successful signup (e.g., redirect or display a success message)
+      // Handle successful signup 
       console.log(response.data);
     } catch (error) {
-      // Handle error (e.g., display error message)
+      // Handle error
       setError("Signup failed");
     }
   };

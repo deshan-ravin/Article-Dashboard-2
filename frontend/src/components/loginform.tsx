@@ -24,10 +24,10 @@ export function LoginForm() {
     event.preventDefault();
     try {
       const response = await axios.post("/api/login", { email, password });
-      // Handle successful login (e.g., redirect or display a success message)
+      // Handle successful login 
       console.log(response.data);
     } catch (error) {
-      // Handle error (e.g., display error message)
+      // Handle error 
       setError("Invalid email or password");
     }
   };

@@ -10,4 +10,5 @@ type Article struct {
 	Title  string  `gorm:"column:title"`
 	Content string `gorm:"column:content"`
 	Date time.Time `gorm:"column:date"`
+	Author string `gorm:"column:author"`
 }

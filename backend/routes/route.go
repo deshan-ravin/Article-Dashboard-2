@@ -10,7 +10,7 @@ func InitRoute(router *gin.Engine) {
 	router.POST("/api/users", handlers.CreateUser)
 	router.GET("/api/users/:email", handlers.GetUserByEmail)
 	//router.PUT("/api/users/:id", handlers.UpdateUser)
-	router.DELETE("/api/users/:id", handlers.DeleteUser)
+	router.DELETE("/api/users/:id", handlers.DeleteUser)   // Delete user by id this will not be used for now
 	router.GET("/health", handlers.HealthCheck)
 	router.POST("/api/login", handlers.Login)
 	router.POST("/api/signup", handlers.Signup)

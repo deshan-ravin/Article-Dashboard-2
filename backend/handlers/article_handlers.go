@@ -63,20 +63,12 @@ func DeleteArticle(c *gin.Context) {
 	c.Status(http.StatusNoContent)
 }
 
-//read article handler
-
-func GetArticleByNo(c *gin.Context) {
-	var article models.Article
-	no := c.Param("no")
-	
-	if err := database.DB.First(&article, no).Error; err != nil {
-		if err == gorm.ErrRecordNotFound {
-			c.Status(http.StatusNotFound)
-		} else {
-			c.Status(http.StatusInternalServerError)
-		}
-		return
-	}
-	
-	c.JSON(http.StatusOK, article)
+// Fetch all articles handler
+func GetArticles(c *gin.Context) {
+    var articles []models.Article
+    if err := database.DB.Find(&articles).Error; err != nil {
+        c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to fetch articles"})
+        return
+    }
+    c.JSON(http.StatusOK, articles)
 }

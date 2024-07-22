@@ -21,5 +21,5 @@ func InitArticleRoute(router *gin.Engine) {
 	router.POST("/api/articles", handlers.CreateArticle)
 	router.PUT("/api/articles/:no", handlers.UpdateArticle)
 	router.DELETE("/api/articles/:no", handlers.DeleteArticle)
-	router.GET("/api/articles/:no", handlers.GetArticleByNo)
+	router.GET("/api/articles/:no", handlers.GetArticles)
 }

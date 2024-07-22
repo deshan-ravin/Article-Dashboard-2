@@ -12,6 +12,8 @@ func InitRoute(router *gin.Engine) {
 	//router.PUT("/api/users/:id", handlers.UpdateUser)
 	router.DELETE("/api/users/:id", handlers.DeleteUser)
 	router.GET("/health", handlers.HealthCheck)
+	router.POST("/api/login", handlers.Login)
+	router.POST("/api/signup", handlers.Signup)
 }
 
 
@@ -20,10 +22,4 @@ func InitArticleRoute(router *gin.Engine) {
 	router.PUT("/api/articles/:no", handlers.UpdateArticle)
 	router.DELETE("/api/articles/:no", handlers.DeleteArticle)
 	router.GET("/api/articles/:no", handlers.GetArticleByNo)
-}
-
-
-func InitAuthRoute(router *gin.Engine) {
-	router.POST("/api/login", handlers.Login)
-	router.POST("/api/signup", handlers.Signup)
 }

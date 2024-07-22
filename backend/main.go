@@ -21,7 +21,6 @@ func main() {
 	// Initialize routes
 	routes.InitRoute(router)
 	routes.InitArticleRoute(router)
-	routes.InitAuthRoute(router)
 
 	// Start server
 	if err := router.Run(":8000"); err != nil {

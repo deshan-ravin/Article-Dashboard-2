@@ -1,21 +1,20 @@
 package handlers
 
 import (
-	"api/database"
-	"api/models"
-	"net/http"
+    "api/database"
+    "api/models"
+    "net/http"
 
-	"github.com/gin-gonic/gin"
-	"golang.org/x/crypto/bcrypt"
-	//"gorm.io/gorm"
+    "github.com/gin-gonic/gin"
+    "golang.org/x/crypto/bcrypt"
 )
-
 
 func Signup(c *gin.Context) {
     var user models.User
 
+    // Bind JSON payload to the User struct
     if err := c.ShouldBindJSON(&user); err != nil {
-        c.Status(http.StatusBadRequest)
+        c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid input"})
         return
     }
 
@@ -29,16 +28,17 @@ func Signup(c *gin.Context) {
     // Hash the password
     hashedPassword, err := bcrypt.GenerateFromPassword([]byte(user.Password), bcrypt.DefaultCost)
     if err != nil {
-        c.Status(http.StatusInternalServerError)
+        c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to hash password"})
         return
     }
     user.Password = string(hashedPassword)
 
     // Save the user to the database
     if err := database.DB.Create(&user).Error; err != nil {
-        c.Status(http.StatusInternalServerError)
+        c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to create user"})
         return
     }
 
+    // Return the created user
     c.JSON(http.StatusCreated, user)
 }

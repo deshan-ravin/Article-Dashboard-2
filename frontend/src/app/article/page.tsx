@@ -17,20 +17,27 @@ export default function ArticlePage() {
   useEffect(() => {
     const url = new URL(window.location.href);
     const title = url.searchParams.get('title');
+    const content = url.searchParams.get('content');
     const author = url.searchParams.get('author');
     const date = url.searchParams.get('date');
-    const content = url.searchParams.get('content');
     
-    if (title && author && date && content) {
+    
+    if (title && content && author && date) {
       setArticleTitle(title);
+      setArticleContent(content);
       setAuthorName(author);
       setDateCreated(date);
-      setArticleContent(content);
     }
   }, []);
   return (
     <main className="flex min-h-screen flex-col items-center justify-center pt-25 pb-24 pl-24 pr-24 bg-zinc-300">
       <Navbar />
+      <div className="container mx-auto">
+        <h1 className="text-4xl font-bold text-left flex mt-10 mb-4 text-red-600">
+          Deshan 👨‍💻
+        </h1>
+      </div>
+
 
       <Card className="w-full max-w-3xl p-4 mt-8"> 
         <CardHeader>

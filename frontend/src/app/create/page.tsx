@@ -9,6 +9,11 @@ export default function CreatArticle() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center pt-25 pb-24 pl-24 pr-24 bg-zinc-300">
       <Navbar />
+      <div className="container mx-auto">
+        <h1 className="text-4xl font-bold text-left flex mt-10 mb-4 text-red-600">
+          Deshan 👨‍💻
+        </h1>
+      </div>
 
       <Card className="w-full max-w-3xl p-4 mt-8"> 
         <CardHeader>

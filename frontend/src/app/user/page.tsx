@@ -24,13 +24,13 @@ export default function Home() {
       authorName: "Alice Johnson",
       dateCreated: "2024-07-18",
       articleTitle: "Spring Boot for Beginners",
-      articleContent: "This article explores the complexities of blockchain technology, explaining its foundational concepts and the mechanics behind distributed ledgers. It discusses the significance of blockchain in enabling secure, transparent transactions without intermediaries, and its potential applications across various sectors, such as finance, supply chain, and healthcare. The article also examines the challenges facing blockchain adoption, including scalability issues, regulatory concerns, and the need for standardization."
+      articleContent: "AThis article explores the complexities of blockchain technology, explaining its foundational concepts and the mechanics behind distributed ledgers. It discusses the significance of blockchain in enabling secure, transparent transactions without intermediaries, and its potential applications across various sectors, such as finance, supply chain, and healthcare. The article also examines the challenges facing blockchain adoption, including scalability issues, regulatory concerns, and the need for standardization."
     },
     {
       authorName: "Bob Brown",
       dateCreated: "2024-07-17",
       articleTitle: "Advanced AWS Techniques",
-      articleContent: "This article investigates the development and impact of progressive web apps (PWAs), highlighting their advantages over traditional web and mobile applications. It explains how PWAs leverage modern web capabilities to deliver app-like experiences, including offline functionality, push notifications, and improved performance. The article also provides practical guidance on building PWAs, covering key technologies such as service workers, web app manifests, and responsive design principles to ensure cross-platform compatibility and user engagement."
+      articleContent: "This article explores the complexities of blockchain technology, explaining its foundational concepts and the mechanics behind distributed ledgers. It discusses the significance of blockchain in enabling secure, transparent transactions without intermediaries, and its potential applications across various sectors, such as finance, supply chain, and healthcare. The article also examines the challenges facing blockchain adoption, including scalability issues, regulatory concerns, and the need for standardization."
     }
   ];
 
@@ -67,8 +67,10 @@ export default function Home() {
             {
               articles.map((article, index) => (
                 <ArticleCard key={index} 
-                articleTitle={article.articleTitle}
-                articleContent={article.articleContent} />
+                articleTitle={article.articleTitle} 
+                articleContent={article.articleContent} 
+                authorName={article.authorName}
+                dateCreated={article.dateCreated}/>
               ))
             }
         </div>

@@ -35,6 +35,12 @@ export default function UpdateArticle() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center pt-25 pb-24 pl-24 pr-24 bg-zinc-300">
       <Navbar />
+      <div className="container mx-auto">
+        <h1 className="text-4xl font-bold text-left flex mt-10 mb-4 text-red-600">
+          Deshan 👨‍💻
+        </h1>
+      </div>
+
 
       <Card className="w-full max-w-3xl p-4 mt-8"> 
         <CardHeader>
@@ -76,7 +82,7 @@ export default function UpdateArticle() {
         </CardContent>
 
         <div className="p-4 flex justify-between">
-        <a href="/article">
+        <a href="/user">
           <button className="px-6 py-3 text-lg font-medium text-red-600 bg-white rounded-md hover:bg-zinc-400 hover:text-red-700 transition duration-300">
             Cancel
           </button>
